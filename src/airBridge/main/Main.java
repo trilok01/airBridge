@@ -29,7 +29,7 @@ public class Main {
 		try {
 			String ipAddress = getIpAddress();
 			
-			LOGGER.log(Level.INFO, "\n**********************\n\nIP address: " + ipAddress + "\n\n**********************");
+			LOGGER.log(Level.INFO, "\n********************************************\n\nIP address: " + ipAddress + "\n\n********************************************");
 		} catch (SocketException e) {
 			LOGGER.log(Level.SEVERE, "Exception occured while fetching IP address.");
 			e.printStackTrace();
@@ -40,7 +40,7 @@ public class Main {
 		ServerSocket serverSocket = receiver.createServerSocket(0);
 		int portNumber = serverSocket.getLocalPort();
 		
-		LOGGER.log(Level.INFO, "\n**********************\n\nPort number: " + portNumber + "\n\n**********************");
+		LOGGER.log(Level.INFO, "\n********************************************\n\nPort number: " + portNumber + "\n\n********************************************");
 		
 		try {
 			receiver.receiveFile(serverSocket, LOCAL_DIR, DESTINATION_FOLDER);
